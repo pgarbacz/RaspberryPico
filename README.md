@@ -1,14 +1,15 @@
 # RapsberryPico
- DIY projects with Raspberry Pi Pico
+## DIY projects with Raspberry Pi Pico
 
- Project List:
+### List of projects:
 
  1. Blinking LED
  2. Pico Nerd Game
+
 ... TBC
 
 
-
+---
  1. Blinkin LED
 The code can be tested on WOKWI https://wokwi.com/projects/418355273497277441
 
@@ -17,6 +18,8 @@ Connection Diagram:
 
 Model tests:
  ![schema](photo/blinking_led.jpg)
+
+ ---
 
  2. Pico Nerd Game
 
