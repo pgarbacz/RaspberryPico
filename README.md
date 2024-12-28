@@ -17,11 +17,7 @@ Connection Diagram:
 ---
  ![schema](img/blinking_led_schema.png)
 
-Model tests:
 ---
- ![schema](photo/blinking_led.jpg)
-
- ---
 
  2. Pico Nerd Game
 
