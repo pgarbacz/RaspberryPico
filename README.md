@@ -14,9 +14,11 @@
 The code can be tested on WOKWI https://wokwi.com/projects/418355273497277441
 
 Connection Diagram:
+---
  ![schema](img/blinking_led_schema.png)
 
 Model tests:
+---
  ![schema](photo/blinking_led.jpg)
 
  ---
@@ -26,8 +28,10 @@ Model tests:
  The code can be tested on WOKWI https://wokwi.com/projects/418430503854160897
 
  Connection Diagram: 
+ ---
  ![schema](img/nerd_game_schema.png)
 
+---
  Simple game for testing user knowledge regarding binary representation of numbers.
  In each turn a number (in range up to 255) is randomly selected and printed on the LCD screen. 
  The user task is to switch on LED's that corresponds to high bit values of the current number.
