@@ -5,6 +5,7 @@
 
  1. Blinking LED
  2. Pico Nerd Game
+ 3. Intruder detection
 
 ... TBC
 
@@ -42,7 +43,7 @@ Connection Diagram:
 
  Connection Diagram: 
  ---
- ![schema](img/intruder_detect.png)
+ ![schema](img/intruder_detect_schema.png)
 
 ---
  Simple application for detecting objects/intruders with use of PIR sensor.
