@@ -34,4 +34,16 @@ Connection Diagram:
 
  Note: libraries for LCD controll source: https://www.circuitschools.com/interfacing-16x2-lcd-module-with-raspberry-pi-pico-with-and-without-i2c/ 
 
+---
+
+ 3. Intruder Detection
+
+ The code can be tested on WOKWI https://wokwi.com/projects/419243512269148161
+
+ Connection Diagram: 
+ ---
+ ![schema](img/intruder_detect.png)
+
+---
+ Simple application for detecting objects/intruders with use of PIR sensor.
 
