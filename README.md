@@ -48,3 +48,12 @@ Connection Diagram:
 ---
  Simple application for detecting objects/intruders with use of PIR sensor.
 
+ 4. Thermostat controler
+
+ Parts list:
+
+ - PT100 amplifiler MAX31865 EAN: 5904422375911
+ - P100 Sensor EAN: 5904422306977
+ - Pico Dual Channel Relay HAT  EAN: 5055652921284
+ - Pico Dual Expander Waveshare 19343 EAN: 5904422371685
+ 
