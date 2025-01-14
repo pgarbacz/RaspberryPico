@@ -6,6 +6,7 @@
  1. Blinking LED
  2. Pico Nerd Game
  3. Intruder detection
+ 4. Thermostat controler
 
 ... TBC
 
