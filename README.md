@@ -5,7 +5,7 @@
 - Thermostat controler
 - Intruder detection
 - Pico Nerd Game
--. Blinking LED
+- Blinking LED
 
 ---
  Thermostat controler
@@ -43,7 +43,3 @@ Pico Nerd Game
 ---
 Blinkin LED
 The code can be tested on WOKWI https://wokwi.com/projects/418355273497277441
-
-Connection Diagram:
----
- ![schema](img/blinking_led_schema.png)
