@@ -2,13 +2,10 @@
 ## DIY projects with Raspberry Pi Pico
 
 ### List of projects:
-
  4. Thermostat controler
  3. Intruder detection
  2. Pico Nerd Game
  1. Blinking LED
-=======
-TBC
 
 ---
  4. Thermostat controler
