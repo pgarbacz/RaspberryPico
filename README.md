@@ -2,13 +2,13 @@
 ## DIY projects with Raspberry Pi Pico
 
 ### List of projects:
- 4. Thermostat controler
- 3. Intruder detection
- 2. Pico Nerd Game
- 1. Blinking LED
+- Thermostat controler
+- Intruder detection
+- Pico Nerd Game
+-. Blinking LED
 
 ---
- 4. Thermostat controler
+ Thermostat controler
 
  Parts list:
 
@@ -17,7 +17,7 @@
  - Pico Dual Channel Relay HAT  EAN: 5055652921284
  - Pico Dual Expander Waveshare 19343 EAN: 5904422371685
 ---
- 3. Intruder Detection
+Intruder Detection
 
  Simple application for detecting objects/intruders with use of PIR sensor.
  The code can be tested on WOKWI https://wokwi.com/projects/419243512269148161
@@ -26,7 +26,7 @@
  ---
  ![schema](img/intruder_detect_schema.png)
  ---
- 2. Pico Nerd Game
+Pico Nerd Game
 
  The code can be tested on WOKWI https://wokwi.com/projects/418430503854160897
 
@@ -41,7 +41,7 @@
  Note: libraries for LCD controll source: https://www.circuitschools.com/interfacing-16x2-lcd-module-with-raspberry-pi-pico-with-and-without-i2c/ 
 
 ---
- 1. Blinkin LED
+Blinkin LED
 The code can be tested on WOKWI https://wokwi.com/projects/418355273497277441
 
 Connection Diagram:
