@@ -1,14 +1,9 @@
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
-
-"""
-This test will initialize the display using displayio and draw a solid green
-background, a smaller purple rectangle, and some yellow text.
-"""
+import MAX31865_heater_control_circuitpython as heater
 import board
 import busio
 import digitalio
-import terminalio
 import displayio
 import time
 from hmi import HMI
@@ -22,7 +17,6 @@ except ImportError:
 from adafruit_display_text import label
 from adafruit_st7789 import ST7789
 
-# Release any resources currently in use for the displays
 displayio.release_displays()
 
 tft_dc = board.GP8
@@ -92,7 +86,7 @@ led = digitalio.DigitalInOut(board.LED)
 # led = digitalio.DigitalInOut(board.SCK)
 led.switch_to_output()
 tempZ = int(200)  # default value
-
+tempMax = 300
 
 try:
     with open("tempZ.txt", "r") as fp:
@@ -128,11 +122,12 @@ while True:
     histP_value.text = str(HistP)
     histM_value.text = str(HistM)
     
+    heater.control(tempA, tempZ, HistM, HistP)
+
     if not JoyCenter.value:
         try:
             with open("tempZ.txt", "w") as fp:
                 # do the C-to-F conversion here if you would like
-                tempZ+=1
                 print(tempZ)
                 fp.write("{0}".format(tempZ))
                 fp.flush()
@@ -156,6 +151,8 @@ while True:
     if not JoyDown.value:
         # Increase global value
         HistP -= 1
+        if HistP<0:
+            HistP=0
         print(f"JoyDown pressed. Global value: {HistP}")
         # Debounce delay (optional)
         time.sleep(0.1)
@@ -163,6 +160,8 @@ while True:
     if not JoyLeft.value:
         # Increase global value
         HistM -= 1
+        if HistM<0:
+            HistM=0
         print(f"JoyLeft pressed. Global value: {HistM}")
         # Debounce delay (optional)
         time.sleep(0.1)
@@ -176,24 +175,32 @@ while True:
     if not buttonA.value:
         # Increase global value
         tempZ += 10
+        if tempZ>tempMax:
+            tempZ=tempMax
         print(f"Button A pressed. Global value: {tempZ}")
         # Debounce delay (optional)
         time.sleep(0.1)
     if not buttonB.value:
         # Increase global value
         tempZ += 1
+        if tempZ>tempMax:
+            tempZ=tempMax
         print(f"Button B pressed. Global value: {tempZ}")
         # Debounce delay (optional)
         time.sleep(0.1)
     if not buttonX.value:
         # Increase global value
         tempZ -= 1
+        if tempZ<=0:
+            tempZ=0
         print(f"Button X pressed. Global value: {tempZ}")
         # Debounce delay (optional)
         time.sleep(0.1)
     if not buttonY.value:
         # Increase global value
         tempZ -= 10
+        if tempZ<=0:
+            tempZ=0
         print(f"Button Y pressed. Global value: {tempZ}")
         # Debounce delay (optional)
         time.sleep(0.1)
